@@ -5,13 +5,13 @@ import slide4 from '../../../assets/images/banner/4.jpg'
 const Banner = () => {
     return (
         <div>
-            <div className="carousel h-[600px] w-full">
-                <div id="slide1" className="carousel-item relative w-full ">
+            <div className="carousel h-[600px] rounded-xl w-full">
+                <div id="slide1" className="carousel-item   relative w-full ">
                     <img
                         src={slide1}
                         className="w-full" />
-                    <div className="absolute top-0 flex left-0 h-full  items-center bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)] ">
-                     <div className='w-1/2 px-12 text-white space-y-8'>
+                    <div className="absolute top-0  flex left-0 h-full  items-center bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)] ">
+                     <div className='w-1/2 px-12   text-white space-y-8'>
                      <h1 className="text-6xl font-semibold text-white ">Affordable Price For Car Servicing</h1>
                       <p>There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
                       <div>
