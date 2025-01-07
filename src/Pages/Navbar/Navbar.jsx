@@ -2,13 +2,20 @@ import { Link, NavLink } from "react-router-dom";
 import navLogo from '../../assets/logo.svg';
 import { FaBagShopping } from "react-icons/fa6";
 import { FaSearch } from "react-icons/fa";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 const Navbar = () => {
+    let {user,logout}=useContext(AuthContext);
+    console.log(user)
     let navLinks = <>
             <li><NavLink to='/'>Home</NavLink></li>
             <li><NavLink to='/about'>About</NavLink></li>
             <li><NavLink to='/services'>Services</NavLink></li>
-            <li><NavLink to='/blog'>Blog</NavLink></li>
-            <li><NavLink to='/contact'>Contact</NavLink></li>
+            <li><NavLink to='/blog'>Blog</NavLink></li> 
+            {
+                user?<div className="flex gap-3 flex-row-reverse items-center"> <h1>{user?.displayName}</h1>   <button onClick={()=>logout()} className="btn">logout</button></div>:
+               <li className="btn"><NavLink to='/login'>Login</NavLink></li>
+            }
     </>
     return (
         <div>
