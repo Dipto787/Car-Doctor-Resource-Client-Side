@@ -3,14 +3,15 @@ import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
+// Your web app's Firebase configuration 
 const firebaseConfig = {
-  apiKey: "AIzaSyBh7N0RB_ovaxvRAGwrbg7nk4ZfqN5KYA0",
-  authDomain: "car-doctor-practice-efa97.firebaseapp.com",
-  projectId: "car-doctor-practice-efa97",
-  storageBucket: "car-doctor-practice-efa97.firebasestorage.app",
-  messagingSenderId: "847521010507",
-  appId: "1:847521010507:web:451ce8431c7983ea060ece"
+
+  apiKey:'AIzaSyBh7N0RB_ovaxvRAGwrbg7nk4ZfqN5KYA0',
+  authDomain: import.meta.env.VITE_authdomain,
+  projectId: import.meta.env.VITE_projectid,
+  storageBucket: import.meta.env.VITE_storagebucket,
+  messagingSenderId: import.meta.env.VITE_messagingsenderid,
+  appId: import.meta.env.VITE_appid,
 };
 
 // Initialize Firebase

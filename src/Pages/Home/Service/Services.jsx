@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 
 const Services = () => {
@@ -26,7 +27,7 @@ const Services = () => {
                             <h2 className="card-title">{service.title}</h2>
                             <p>{service.description.slice(0,80)}.....</p>
                             <div className="card-actions">
-                                <button className="btn btn-primary">Book</button>
+                                <Link to={`/services/${service._id}`} className="btn btn-primary">Book</Link>
                             </div>
                         </div>
                     </div>

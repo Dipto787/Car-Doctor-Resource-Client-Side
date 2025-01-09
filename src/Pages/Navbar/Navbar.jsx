@@ -8,10 +8,8 @@ const Navbar = () => {
     let {user,logout}=useContext(AuthContext);
     console.log(user)
     let navLinks = <>
-            <li><NavLink to='/'>Home</NavLink></li>
-            <li><NavLink to='/about'>About</NavLink></li>
-            <li><NavLink to='/services'>Services</NavLink></li>
-            <li><NavLink to='/blog'>Blog</NavLink></li> 
+            <li><NavLink to='/'>Home</NavLink></li>  
+            <li><NavLink to='/booking'>My Bookings</NavLink></li> 
             {
                 user?<div className="flex gap-3 flex-row-reverse items-center"> <h1>{user?.displayName}</h1>   <button onClick={()=>logout()} className="btn">logout</button></div>:
                <li className="btn"><NavLink to='/login'>Login</NavLink></li>
